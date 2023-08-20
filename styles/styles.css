@@ -76,7 +76,7 @@ h2 {
 @media(min-width:768px) {
     .team__grid {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 40rem);
+        grid-template-rows: repeat(2, 40rem);
         margin: 0 auto;
         gap: 3rem;
     }
