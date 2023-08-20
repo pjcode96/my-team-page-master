@@ -1,0 +1,169 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', monospace;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+    margin: 1.5rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/** Header **/
+
+@media(min-width:1024px) {
+    .header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .header__title {
+        font-size: 4rem;
+    }
+
+    .header__about {
+        max-width: 35rem;
+    }
+
+    .header__about__title {
+        font-size: 3rem;
+    }
+
+    .header__about__text {
+        font-size: 2rem;
+    }
+}
+
+
+/** Main Content **/
+
+
+.container {
+    max-width: 120rem;
+    margin: 5rem auto 0 auto;
+    width: 90%;
+}
+
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 33rem);
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+@media(min-width:768px) {
+    .team__grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 40rem);
+        margin: 0 auto;
+        gap: 3rem;
+    }
+}
+
+@media(min-width:1024px) {
+    .team__grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 50rem);
+        margin: 0 auto;
+        row-gap: 2rem;
+        column-gap: 0;
+    }
+
+}
+
+.team__component {
+    justify-self: center;
+}
+
+.team__component:nth-child(2n+2) {
+    align-self: end;
+}
+
+@media(min-width:768px) {
+    .team__component:nth-child(2n+2) {
+        align-self: start;
+    }
+
+    .team__component:nth-child(3n + 2) {
+        align-self: end;
+    }
+}
+
+.team__component__image__block {
+    position: relative
+}
+
+.team__component__image__block::before {
+    content: "Product Owner";
+    position: absolute;
+    bottom: 60%;
+    left: 58%;
+    transform: rotate(90deg);
+    width: 100%;
+    font-size: 1.4rem;
+    color: #585858;
+}
+
+@media(min-width:1024px) {
+    .team__component__image__block::before {
+        bottom: 60%;
+        left: 54%;
+    }
+}
+
+
+.team__component__image {
+    display: block;
+    width: 14rem;
+    max-height: 35.8rem;
+}
+
+@media(min-width:768px) {
+    .team__component__image {
+        width: 18rem;
+    }
+}
+
+@media(min-width:1024px) {
+    .team__component__image {
+        width: 25rem;
+    }
+}
+
+.team__component__name {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/** footer **/
+
+.footer {
+    margin-top: 5rem;
+}
+
+.footer__text {
+    color: #585858;
+    text-align: center;
+}
