@@ -137,6 +137,7 @@ h2 {
 .team__component__image {
     display: block;
     width: 14rem;
+    height: auto;
     max-height: 35.8rem;
 }
 
