@@ -115,20 +115,44 @@ h2 {
     position: relative
 }
 
-.team__component__image__block::before {
+.team__component:nth-child(1) .team__component__image__block::before {
     content: "Product Owner";
+}
+
+.team__component:nth-child(2) .team__component__image__block::before {
+    content: "Art Director";
+}
+
+.team__component:nth-child(3) .team__component__image__block::before {
+    content: "Tech Lead";
+}
+
+.team__component:nth-child(4) .team__component__image__block::before {
+    content: "UX Designer";
+}
+
+.team__component:nth-child(5) .team__component__image__block::before,
+.team__component:nth-child(6) .team__component__image__block::before {
+    content: "Developer";
+}
+
+.team__component__image__block::before {
     position: absolute;
     bottom: 60%;
     left: 58%;
     transform: rotate(90deg);
     width: 100%;
-    font-size: 1.4rem;
-    color: #585858;
+    font-size: 1.2rem;
+    color: #9c9c9c;
+    text-transform: uppercase;
 }
+
+
+
 
 @media(min-width:1024px) {
     .team__component__image__block::before {
-        bottom: 60%;
+        bottom: 63%;
         left: 54%;
     }
 }
